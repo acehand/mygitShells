@@ -1,7 +1,7 @@
 echo "Preparing Release Branch for " + $1
-git checkout develop
+git checkout $2
 echo "Checking develop branch out "
-git fetch && pull --rebase origin develop 
+git fetch && pull --rebase origin $2 
 echo "Fetching the latest of Develop branch"
 git checkout -b $1
 echo "creating new Release for Push"
