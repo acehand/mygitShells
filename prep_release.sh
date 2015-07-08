@@ -1,11 +1,13 @@
-echo "Preparing Release Branch for " + $1
-git checkout $2
+echo 'Moving to the Git Folder'
+cd $1
+echo "Preparing Release Branch for " + $2
+git checkout $3
 echo "Checking develop branch out "
-git fetch && pull --rebase origin $2 
+git fetch && pull --rebase origin $3 
 echo "Fetching the latest of Develop branch"
-git checkout -b $1
+git checkout -b $2
 echo "creating new Release for Push"
-git push origin $1
+git push origin $2
 echo "Pushing to repo"
 
 
