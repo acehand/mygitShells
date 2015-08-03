@@ -1,4 +1,4 @@
-echo "Publishing release with" $2
+echo "Publishing release with tag " $2
 
 echo "Moving to the application Folder " $1
 
